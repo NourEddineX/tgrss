@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	<channel>
+		<title>{{channel_name}}</title>
+		<link>{{channel_url}}</link>
+		<description>{{channel_bio}}</description>
+		{% for msg in msgs %}
+		<item>
+			<title>{{channel_name}} @ {{msg[4]}}</title>
+			<description><![CDATA[{{msg[0]|safe}}
+				{% if msg[1] %}<p>{{msg[1]}} views</p>{% endif %}]]>
+			</description>
+			<link>{{msg[2]}}</link>
+			{% if msg[5] %}
+			<enclosure url="{{ msg[5] }}" type="image/jpg" />
+			{% endif %}
+			<pubDate>{{msg[3]}}</pubDate>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>
+
