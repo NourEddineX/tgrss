@@ -124,4 +124,4 @@ def tgfeed(tgid):
     return Response(feed,mimetype='text/xml')
 
 if __name__ == '__main__':
-    app.run(port=1234,host='127.0.0.1')
+    app.run(port=1234,host='0.0.0.0')
