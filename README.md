@@ -16,7 +16,7 @@ python3 app.py
 
 ```
 
-- In your favorite RSS reader, add telegram channels as a new feed : http://localhost:1234/tgrss/*channel_handle*, as http://localhost:1234/tgrss/telegram for https://t.me/telegram
+- In your favorite RSS reader, add telegram channels as a new feed : http://localhost:1234/*channel_handle*, as http://localhost:1234/telegram for https://t.me/telegram
 
 ### Notes
 

@@ -111,9 +111,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'tgrss: https://gitlab.com/NourEddineX/tgrss\n'
+    return 'Usage: GET /durov -> https://t.me/durov as RSS feed'
 
-@app.route('/tgrss/<tgid>')
+@app.route('/<tgid>')
 def tgfeed(tgid):
     if not check_tgid(tgid):
         return jsonify('Bad @name'), 404
